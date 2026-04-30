@@ -1,0 +1,41 @@
+@import url('https://rsms.me/inter/inter.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-gradient-to-br from-[#0a0b10] via-[#1a1b2e] to-[#0a0b10];
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl;
+  }
+
+  .glass-sm {
+    @apply backdrop-blur-lg bg-white/5 border border-white/10 rounded-lg;
+  }
+
+  .glass-dark {
+    @apply backdrop-blur-xl bg-black/30 border border-white/5 rounded-2xl;
+  }
+
+  .glow-orange {
+    @apply shadow-lg shadow-orange-500/20;
+  }
+
+  .glow-orange-hover {
+    @apply hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300;
+  }
+}
